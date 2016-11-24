@@ -214,16 +214,16 @@ int main()
 
     my_malloc_init();
     printf("init done\n");
-    //mprotectFunc(getPhyMem(),8388608,PROT_NONE);
-    mprotect(memory_resource, 2048 * 4096, PROT_NONE);
+    //mprotect(memory_resource, 2048 * 4096, PROT_NONE);
     char* test = myallocate(4099, __FILE__, __LINE__ , 1);
     Gthread_id = 1;
     *(test) = 'a';
     *(test+1) = 'b';
     *(test+2) = 'c';
     *(test+4098) = 'r';
-    /*
     printf("test is: %p %c%c%c\n",test,*(test),*(test+1),*(test+4098));
+    /*
+    
     
     char* test1 = myallocate(4093, __FILE__, __LINE__ , 1);
     Gthread_id=1;
